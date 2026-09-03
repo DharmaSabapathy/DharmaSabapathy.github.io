@@ -1281,3 +1281,42 @@ figcaption {
   .container { max-width: none; padding: 0; }
   .section { padding-block: 1rem; }
 }
+
+/* --- Hero with a photographic background --------------------------------
+   Full-bleed image behind the hero, with a scrim to hold text contrast.
+   The scrim is a flat wash, not a decorative gradient: its only job is to
+   keep body copy above 4.5:1 against a busy photograph.
+   ------------------------------------------------------------------------ */
+
+.hero--photo {
+  position: relative;
+  isolation: isolate;
+  background-image: url("../img/hero-field.jpg");
+  background-size: cover;
+  background-position: 50% 42%;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero--photo .hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--paper) 96%, transparent) 0%,
+    color-mix(in srgb, var(--paper) 92%, transparent) 42%,
+    color-mix(in srgb, var(--paper) 62%, transparent) 100%
+  );
+}
+
+.hero--photo .hero__portrait {
+  box-shadow: 0 12px 40px -18px rgb(0 0 0 / 0.55);
+}
+
+@media (max-width: 60rem) {
+  /* On narrow screens the text spans the full width, so the photo needs to
+     go almost entirely behind a wash to stay readable. */
+  .hero--photo .hero__scrim {
+    background: color-mix(in srgb, var(--paper) 93%, transparent);
+  }
+}
