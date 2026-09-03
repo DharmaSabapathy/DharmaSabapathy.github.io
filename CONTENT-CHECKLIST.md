@@ -1,34 +1,11 @@
 # What's left
 
-The site is written and publishable. Everything below is optional except the
-first item.
+The site is live and contains no placeholders. Everything below is optional
+polish, roughly in order of how much it would improve the site.
 
 ---
 
-## 1. LinkedIn URL — the one thing that is broken
-
-Every page links to `https://www.linkedin.com/in/your-linkedin/`, which does not
-exist. Nothing else on the site is a placeholder. Fix it from the repository
-root:
-
-```powershell
-Get-ChildItem -Recurse -Include *.html | ForEach-Object {
-  $p = $_.FullName
-  $t = [IO.File]::ReadAllText($p)
-  [IO.File]::WriteAllText($p, $t.Replace('your-linkedin', 'your-actual-slug'))
-}
-```
-
-Your slug is the part after `/in/` in your profile URL. Then check nothing is
-left:
-
-```powershell
-Select-String -Recurse -Path *.html -Pattern 'your-linkedin'
-```
-
----
-
-## 2. Project images
+## 1. Project images
 
 Every project page has a commented-out `<figure>` block showing exactly where an
 image goes and what filename to use. Uncomment it, drop the file in, done.
@@ -57,7 +34,7 @@ delete `project-row--no-thumb` from its `<article>` and add:
 
 ---
 
-## 3. Numbers, if they are releasable
+## 2. Numbers, if they are releasable
 
 The write-ups describe what you did but carry almost no figures, because your
 portfolio deck didn't have any. Numbers are what make a technical reader believe
@@ -72,7 +49,7 @@ Only publish what you're cleared to. See the note on releasability below.
 
 ---
 
-## 4. Things to confirm
+## 3. Things to confirm
 
 - **`index.html`** — "Open to Summer 2027 internships" in the facts strip. This
   is the only line on the site I inferred rather than took from your résumé.
@@ -83,7 +60,7 @@ Only publish what you're cleared to. See the note on releasability below.
 
 ---
 
-## 5. Releasability
+## 4. Releasability
 
 Two pages describe work done inside other organisations:
 
@@ -98,7 +75,7 @@ control restrictions. Worth one email to your former managers before you publish
 
 ---
 
-## 6. Before you publish
+## 5. Spot-check the live site
 
 - [ ] Click every link, including the résumé PDF.
 - [ ] Read the site at 375 px and at 1440 px.
