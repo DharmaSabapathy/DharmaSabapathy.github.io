@@ -1,0 +1,11 @@
+# Normalise line endings so the repository always stores LF, regardless of
+# which machine commits. Without this, Windows checkouts produce noisy
+# whole-file diffs the first time anyone edits on another OS.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
+*.ico binary

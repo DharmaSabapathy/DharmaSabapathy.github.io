@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Site icon">
+  <!-- A datum-target mark: neutral, technical, and it needs no editing when
+       you change your name. Swap it for a monogram if you prefer. -->
+  <style>
+    .bg   { fill: #17181a; }
+    .mark { fill: none; stroke: #faf8f5; stroke-width: 3.5; }
+    .dot  { fill: #d2703a; }
+    @media (prefers-color-scheme: dark) {
+      .bg   { fill: #eceae6; }
+      .mark { stroke: #121316; }
+      .dot  { fill: #9c4413; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="12"/>
+  <circle class="mark" cx="32" cy="32" r="15"/>
+  <path class="mark" d="M32 8v10M32 46v10M8 32h10M46 32h10"/>
+  <circle class="dot" cx="32" cy="32" r="5"/>
+</svg>

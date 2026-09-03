@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Dharma Sabapathy — Mechanical Design &amp; Robotics</title>
+<meta name="description" content="Mechanical engineering student at UT Austin. Front trunk assembly for NASA's Lunar Terrain Vehicle, HMI design at Apptronik, and four years leading design on FRC 2468.">
+<link rel="canonical" href="https://poseidon2000000.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dharma Sabapathy — Mechanical Design &amp; Robotics">
+<meta property="og:description" content="Mechanism design, sheet metal and system integration. NASA Johnson Space Center, Apptronik, FRC 2468.">
+<meta property="og:url" content="https://poseidon2000000.github.io/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<!-- THEME BOOTSTRAP — runs before first paint so there is no flash of the
+     wrong theme. Keep this inline and keep it in every page. -->
+<script>
+(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== HEADER (shared across pages) ===================== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="./">
+      <span class="wordmark__name">Dharma Sabapathy</span>
+      <span class="wordmark__role">Mechanical Design &amp; Robotics</span>
+    </a>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./" aria-current="page">Home</a></li>
+        <li><a href="projects/">Projects</a></li>
+        <li><a href="experience/">Experience</a></li>
+        <li><a href="resume/">Résumé</a></li>
+        <li><a href="contact/">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-btn icon-btn--social" href="https://github.com/Poseidon2000000" aria-label="GitHub profile" rel="me noopener" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <!-- TODO: replace your-linkedin with your LinkedIn slug (every page). -->
+      <a class="icon-btn icon-btn--social" href="https://www.linkedin.com/in/your-linkedin/" aria-label="LinkedIn profile" rel="me noopener" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+      </a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.4A8.6 8.6 0 0 1 10.6 3.5a8.6 8.6 0 1 0 9.9 9.9z"/></svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="visually-hidden">Menu</span>
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div>
+          <p class="eyebrow">Mechanical Engineering &middot; UT Austin</p>
+          <h1>I design mechanisms and take them to hardware.</h1>
+
+          <p class="hero__lede">
+            I&rsquo;m a mechanical engineering student at UT Austin. This past summer I
+            designed the <strong>front trunk assembly for NASA&rsquo;s Lunar Terrain
+            Vehicle</strong> at Johnson Space Center; the summer before, a
+            <strong>human-machine interface for Apptronik&rsquo;s humanoid robots</strong>.
+            Most of how I work came from four years leading design on FRC 2468 —
+            where a mechanism either survives a match or it doesn&rsquo;t.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn" href="projects/">View projects</a>
+            <a class="btn btn--secondary" href="resume/">Résumé</a>
+            <a class="btn btn--secondary" href="https://www.linkedin.com/in/your-linkedin/" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+              LinkedIn
+            </a>
+            <a class="btn btn--secondary" href="https://github.com/Poseidon2000000" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__portrait">
+          <img src="assets/img/portrait.jpg" alt="Dharma Sabapathy" width="880" height="1100">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ QUICK FACTS ============================ -->
+  <section class="section section--flush section--tight" aria-label="At a glance">
+    <div class="container">
+      <div class="facts">
+        <div class="fact">
+          <span class="fact__label">Focus</span>
+          <span class="fact__value">Mechanical design &amp; robotics</span>
+        </div>
+        <div class="fact">
+          <span class="fact__label">Studying</span>
+          <span class="fact__value">B.S.M.E., UT Austin &middot; Class of 2030</span>
+        </div>
+        <div class="fact">
+          <span class="fact__label">Based in</span>
+          <span class="fact__value">Austin, Texas</span>
+        </div>
+        <div class="fact">
+          <!-- TODO: confirm or change — this is the one line on the site I
+               inferred rather than took from your résumé. -->
+          <span class="fact__label">Currently</span>
+          <span class="fact__value">Open to Summer 2027 internships</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WHAT I DO ============================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <p class="eyebrow">What I work on</p>
+          <h2>Four things every project comes back to</h2>
+          <p>Whether it&rsquo;s a rover hood or a ball transfer, the work is the same
+             shape: figure out the force, make the geometry fit the space you
+             actually have, and design it for how it will be built.</p>
+        </div>
+      </div>
+
+      <div class="capability-grid">
+        <article class="capability">
+          <h3>Mechanism design</h3>
+          <p>Gas springs, latches, pivots and dead-axle rollers. Sizing the force
+             first, then making the linkage fit inside the packaging that&rsquo;s left.</p>
+        </article>
+        <article class="capability">
+          <h3>Sheet metal &amp; structure</h3>
+          <p>Bodywork, brackets, billet mounts and reinforcement — designed around
+             the bend, the fastener and the tube it has to land on.</p>
+        </article>
+        <article class="capability">
+          <h3>System integration</h3>
+          <p>Master sketches, space claims and interface control, so six subsystems
+             designed by six people still assemble into one machine.</p>
+        </article>
+        <article class="capability">
+          <h3>Prototype to production</h3>
+          <p>FDM for iteration, SLS for the deliverable, and DFM decisions taken
+             early enough that injection moulding stays possible at scale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= SELECTED PROJECTS ========================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects</h2>
+          <p>Three highlights. Six full write-ups on the projects page.</p>
+        </div>
+        <a class="link-arrow" href="projects/">All projects</a>
+      </div>
+
+      <ul class="project-list">
+        <li>
+          <article class="project-row project-row--no-thumb">
+            <p class="project-row__meta">2026 &middot; NASA JSC</p>
+            <div class="project-row__body">
+              <h3 class="project-row__title"><a href="projects/nasa-ltv-frunk.html">Lunar Terrain Vehicle front trunk</a></h3>
+              <p class="project-row__summary">
+                A self-opening hood for NASA&rsquo;s LTV ground test unit. I calculated
+                the centre of mass and the gas-spring force needed to lift it, then
+                designed the sheet-metal structure, billet mounts and latch around
+                a chassis I inherited.
+              </p>
+              <ul class="tag-list">
+                <li><span class="tag">SOLIDWORKS</span></li>
+                <li><span class="tag">Gas springs</span></li>
+                <li><span class="tag">Sheet metal</span></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="project-row project-row--no-thumb">
+            <p class="project-row__meta">2025 &middot; Apptronik</p>
+            <div class="project-row__body">
+              <h3 class="project-row__title"><a href="projects/apptronik-hmi.html">Humanoid robot HMI handles</a></h3>
+              <p class="project-row__summary">
+                Control handles for physically manipulating a humanoid robot.
+                Designed from scratch, revised against beta-tester feedback on
+                button placement and ergonomics, delivered in SLS with injection
+                moulding in mind.
+              </p>
+              <ul class="tag-list">
+                <li><span class="tag">Onshape</span></li>
+                <li><span class="tag">Ergonomics</span></li>
+                <li><span class="tag">DFM</span></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="project-row project-row--no-thumb">
+            <p class="project-row__meta">2026 &middot; FRC 2468</p>
+            <div class="project-row__body">
+              <h3 class="project-row__title"><a href="projects/frc-2468-integration.html">Competition robot integration</a></h3>
+              <p class="project-row__summary">
+                Full-robot integration from the ground up. A master sketch defined
+                every subsystem interface, space claim and the game-piece path
+                through the machine before anyone detailed a part.
+              </p>
+              <ul class="tag-list">
+                <li><span class="tag">Master sketch</span></li>
+                <li><span class="tag">Interface control</span></li>
+                <li><span class="tag">Packaging</span></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =========================== EXPERIENCE =========================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <p class="eyebrow">Where I&rsquo;ve worked</p>
+          <h2>Experience</h2>
+        </div>
+        <a class="link-arrow" href="experience/">Full history</a>
+      </div>
+
+      <ol class="timeline">
+        <li>
+          <article class="entry">
+            <p class="entry__when">Jun &ndash; Aug 2026</p>
+            <div>
+              <h3 class="entry__role">Robotics Intern</h3>
+              <p class="entry__org">NASA ER4, Johnson Space Center &middot; Houston, TX</p>
+              <ul>
+                <li>Redesigned the front trunk assembly for the Lunar Terrain
+                    Vehicle, resolving inherited CAD conflicts and refining the
+                    full sheet-metal exterior.</li>
+                <li>Delivered the completed CAD assembly and technical
+                    documentation for continued development and fabrication.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="entry">
+            <p class="entry__when">Jun &ndash; Aug 2025</p>
+            <div>
+              <h3 class="entry__role">Mechanical Engineering Intern</h3>
+              <p class="entry__org">Elevate Robotics, Apptronik &middot; Austin, TX</p>
+              <ul>
+                <li>Led a mechanical HMI subsystem from concept through CAD, 3-D
+                    printing and final SLS prototyping.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="entry">
+            <p class="entry__when">2022 &ndash; 2026</p>
+            <div>
+              <h3 class="entry__role">Team Captain &amp; Design Lead</h3>
+              <p class="entry__org">FRC 2468, Team Appreciate &middot; Austin, TX</p>
+              <ul>
+                <li>Led technical development for a 150-student program: mechanical
+                    design, subsystem integration and competition readiness.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================== SKILLS ============================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <p class="eyebrow">Toolset</p>
+          <h2>Technical skills</h2>
+          <p>Short on purpose. Everything here has been used on hardware that
+             shipped, competed or was handed over.</p>
+        </div>
+      </div>
+
+      <div class="split split--even">
+        <div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Mechanical design</h3>
+            <ul class="skill-list">
+              <li>SOLIDWORKS (CSWA)</li><li>Onshape</li><li>Sheet metal</li>
+              <li>Assembly design</li><li>Design for manufacture</li>
+              <li>Master sketching &amp; interface control</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Fabrication</h3>
+            <ul class="skill-list">
+              <li>FDM 3-D printing</li><li>SLS 3-D printing</li>
+              <li>Laser cutting</li><li>Rapid prototyping</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Analysis</h3>
+            <ul class="skill-list">
+              <li>Centre-of-mass &amp; gas-spring sizing</li>
+              <li>CFD (sonic-boom study)</li><li>Bearing &amp; fastener stackups</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Programming</h3>
+            <ul class="skill-list">
+              <li>Java</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CONTACT ============================== -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="prose">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Open to internships, and happy to talk shop.</h2>
+          <p class="text-muted">
+            Email is the fastest way to reach me. If you want the CAD, the
+            calculations or the reasoning behind anything on this site, ask —
+            I&rsquo;d rather send you the detail than the summary.
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="mailto:dharma.r.sabapathy@gmail.com">Email me</a>
+            <a class="btn btn--secondary" href="contact/">All contact details</a>
+          </div>
+        </div>
+        <aside>
+          <dl class="spec">
+            <div class="spec__row">
+              <dt>Email</dt>
+              <dd><a href="mailto:dharma.r.sabapathy@gmail.com">dharma.r.sabapathy@gmail.com</a></dd>
+            </div>
+            <div class="spec__row">
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/your-linkedin/" rel="noopener" target="_blank">/in/your-linkedin</a></dd>
+            </div>
+            <div class="spec__row">
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/Poseidon2000000" rel="noopener" target="_blank">@Poseidon2000000</a></dd>
+            </div>
+            <div class="spec__row">
+              <dt>Résumé</dt>
+              <dd><a href="resume/">View &amp; download PDF</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER (shared across pages) ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2 class="label-heading">Dharma Sabapathy</h2>
+        <p>Mechanical engineering student at UT Austin. Mechanism design, sheet
+           metal and system integration.</p>
+      </div>
+      <div>
+        <h2 class="label-heading">Site</h2>
+        <ul class="footer-list">
+          <li><a href="./">Home</a></li>
+          <li><a href="projects/">Projects</a></li>
+          <li><a href="experience/">Experience</a></li>
+          <li><a href="resume/">Résumé</a></li>
+          <li><a href="contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="label-heading">Elsewhere</h2>
+        <ul class="footer-list">
+          <li><a href="https://www.linkedin.com/in/your-linkedin/" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/Poseidon2000000" rel="me noopener" target="_blank">GitHub</a></li>
+          <li><a href="mailto:dharma.r.sabapathy@gmail.com">dharma.r.sabapathy@gmail.com</a></li>
+          <li><a href="assets/resume/resume.pdf">Résumé (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-current-year>2026</span> Dharma Sabapathy</p>
+      <p>Hand-written HTML and CSS. Hosted on GitHub Pages.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

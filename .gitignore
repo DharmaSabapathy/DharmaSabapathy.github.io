@@ -1,0 +1,24 @@
+# OS and editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Working files that should not be published — the whole repository is served
+# by GitHub Pages, so anything committed here is public.
+/drafts/
+*.docx
+*.pptx
+*.SLDPRT
+*.SLDASM
+*.step
+*.stp
+*.iges
+
+# Agent scratch output that predates the site
+/2026-09-03/
+
+# Empty leftover, superseded by README.md
+ReadMe.txt
