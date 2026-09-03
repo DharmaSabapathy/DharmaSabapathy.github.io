@@ -1097,6 +1097,49 @@ figcaption {
 
 .hero__portrait .img-placeholder { height: 100%; aspect-ratio: auto; border: 0; }
 
+/* --- Hero with a photographic background --------------------------------
+   The championship field photo sits full-bleed behind the hero. A scrim
+   holds text contrast: it is a flat wash of the page colour, not a
+   decorative gradient. Its only job is to keep the lede above 4.5:1
+   against a busy photograph, so it is heaviest under the text column and
+   thins out to the right where only the portrait sits.
+   ------------------------------------------------------------------------ */
+
+.hero--photo {
+  position: relative;
+  isolation: isolate;
+  background-image: url("../img/hero-field.jpg");
+  background-size: cover;
+  background-position: 50% 46%;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero--photo .hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--paper) 96%, transparent) 0%,
+    color-mix(in srgb, var(--paper) 93%, transparent) 45%,
+    color-mix(in srgb, var(--paper) 58%, transparent) 100%
+  );
+}
+
+/* Lifts the portrait off the photograph so the two images read as separate
+   things rather than one collage. */
+.hero--photo .hero__portrait {
+  box-shadow: 0 12px 40px -18px rgb(0 0 0 / 0.55);
+}
+
+@media (max-width: 60rem) {
+  /* Single column below this width, so the text runs the full width of the
+     photo and the wash has to be even. */
+  .hero--photo .hero__scrim {
+    background: color-mix(in srgb, var(--paper) 93%, transparent);
+  }
+}
+
 /* Quick facts strip under the hero. */
 /* Four facts, so step 1 -> 2 -> 4 columns. auto-fit would land on three at
    tablet width and leave the fourth stranded on its own row. */
