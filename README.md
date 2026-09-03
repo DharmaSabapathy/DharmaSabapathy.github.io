@@ -38,7 +38,7 @@ twice. There is nothing here to break.
 └── sitemap.xml
 ```
 
-The site is published at **https://poseidon2000000.github.io/**.
+The site is published at **https://dharmasabapathy.github.io/**.
 
 Every page links with **relative** paths (`../assets/…`), so the site works
 whether it is served from `username.github.io` or `username.github.io/repo/`,
@@ -49,10 +49,10 @@ which uses a `<base href="/">` tag — that file is explained in its own comment
 
 ## Publishing to GitHub Pages
 
-1. Create a repository named exactly **`Poseidon2000000.github.io`** and push
+1. Create a repository named exactly **`DharmaSabapathy.github.io`** and push
    these files to its `main` branch.
    - If you use a differently-named repo instead, the site will live at
-     `poseidon2000000.github.io/<repo>/`. In that case change `<base href="/">`
+     `dharmasabapathy.github.io/<repo>/`. In that case change `<base href="/">`
      in `404.html` to `<base href="/<repo>/">`, and update the URLs in
      `sitemap.xml`, `robots.txt` and the `canonical`/`og:url` tags.
 2. **Settings → Pages → Build and deployment.** Pick one:
@@ -77,7 +77,7 @@ winget install --id Git.Git -e
 git init -b main
 git add -A
 git commit -m "Portfolio site"
-git remote add origin https://github.com/Poseidon2000000/Poseidon2000000.github.io.git
+git remote add origin https://github.com/DharmaSabapathy/DharmaSabapathy.github.io.git
 git push -u origin main
 ```
 

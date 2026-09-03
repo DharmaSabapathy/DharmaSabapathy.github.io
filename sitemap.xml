@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- One <url> block per page. Add a line whenever you add a project. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://poseidon2000000.github.io/</loc><priority>1.0</priority></url>
-  <url><loc>https://poseidon2000000.github.io/projects/</loc><priority>0.9</priority></url>
-  <url><loc>https://poseidon2000000.github.io/projects/nasa-ltv-frunk.html</loc><priority>0.9</priority></url>
-  <url><loc>https://poseidon2000000.github.io/projects/apptronik-hmi.html</loc><priority>0.8</priority></url>
-  <url><loc>https://poseidon2000000.github.io/projects/frc-2468-integration.html</loc><priority>0.8</priority></url>
-  <url><loc>https://poseidon2000000.github.io/projects/frc-2468-transfer.html</loc><priority>0.7</priority></url>
-  <url><loc>https://poseidon2000000.github.io/projects/frc-2468-hopper.html</loc><priority>0.7</priority></url>
-  <url><loc>https://poseidon2000000.github.io/projects/quiet-supersonic-aircraft.html</loc><priority>0.7</priority></url>
-  <url><loc>https://poseidon2000000.github.io/experience/</loc><priority>0.8</priority></url>
-  <url><loc>https://poseidon2000000.github.io/resume/</loc><priority>0.8</priority></url>
-  <url><loc>https://poseidon2000000.github.io/contact/</loc><priority>0.7</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/projects/</loc><priority>0.9</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/projects/nasa-ltv-frunk.html</loc><priority>0.9</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/projects/apptronik-hmi.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/projects/frc-2468-integration.html</loc><priority>0.8</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/projects/frc-2468-transfer.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/projects/frc-2468-hopper.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/projects/quiet-supersonic-aircraft.html</loc><priority>0.7</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/experience/</loc><priority>0.8</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/resume/</loc><priority>0.8</priority></url>
+  <url><loc>https://dharmasabapathy.github.io/contact/</loc><priority>0.7</priority></url>
 </urlset>
