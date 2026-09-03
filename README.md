@@ -20,9 +20,7 @@ twice. There is nothing here to break.
 │   ├── index.html           Project index
 │   ├── nasa-ltv-frunk.html            LTV front trunk — NASA JSC
 │   ├── apptronik-hmi.html             Humanoid HMI handles — Apptronik
-│   ├── frc-2468-integration.html      Robot integration — FRC 2468
-│   ├── frc-2468-transfer.html         Transfer subsystem
-│   ├── frc-2468-hopper.html           Expanding hopper
+│   ├── frc-2468.html                  FRC 2468 robot: integration, transfer, hopper
 │   └── quiet-supersonic-aircraft.html NASA SEES research
 ├── experience/index.html    Roles, education, leadership, skills, awards
 ├── resume/index.html        PDF viewer + a readable web version

@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Expanding hopper — Dharma Sabapathy</title>
-<meta name="description" content="A horizontally expanding hopper for FRC 2468, designed from scratch across two revisions — trading V1's active-geometry deployment for a simpler, more robust mechanism in V2.">
-<link rel="canonical" href="https://dharmasabapathy.github.io/projects/frc-2468-hopper.html">
+<title>FRC 2468 competition robot — Dharma Sabapathy</title>
+<meta name="description" content="Whole-robot integration plus the transfer and expanding hopper subsystems for FRC 2468's 2026 competition robot: master sketching, dead-axle drives and bearing stackups.">
+<link rel="canonical" href="https://dharmasabapathy.github.io/projects/frc-2468.html">
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Expanding hopper — Dharma Sabapathy">
-<meta property="og:description" content="A horizontally expanding hopper for FRC 2468, designed from scratch across two revisions — trading V1's active-geometry deployment for a simpler, more robust mechanism in V2.">
-<meta property="og:url" content="https://dharmasabapathy.github.io/projects/frc-2468-hopper.html">
+<meta property="og:title" content="FRC 2468 competition robot — Dharma Sabapathy">
+<meta property="og:description" content="Whole-robot integration plus the transfer and expanding hopper subsystems for FRC 2468's 2026 competition robot: master sketching, dead-axle drives and bearing stackups.">
+<meta property="og:url" content="https://dharmasabapathy.github.io/projects/frc-2468.html">
 
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
 
 <!-- THEME BOOTSTRAP -->
 <script>
-(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light");}catch(e){}})();
 </script>
 </head>
 
@@ -66,18 +66,20 @@
 </header>
 
 <main id="main">
+
   <div class="project-header">
     <div class="container">
       <p class="breadcrumb">
-        <a href="../">Home</a><span>/</span><a href="./">Projects</a><span>/</span>Hopper
+        <a href="../">Home</a><span>/</span><a href="./">Projects</a><span>/</span>FRC 2468
       </p>
 
-      <h1>Expanding hopper</h1>
+      <h1>FRC 2468 — competition robot</h1>
 
       <p class="lede">
-        A hopper that expands horizontally to hold game pieces and collapses back
-        inside the frame. Two versions — and the second one is better because it
-        does less.
+        Four seasons with Team Appreciate, a 150-student program in Austin. On the
+        2026 robot I ran integration for the whole machine and designed two of its
+        subsystems from scratch. Everything here had to survive a competition
+        weekend without anyone being allowed to fix it between matches.
       </p>
     </div>
   </div>
@@ -88,13 +90,119 @@
 
         <article class="prose">
 
-          <!-- IMAGE: V2 CAD, V2 hardware, V1 hardware.
+          <!-- IMAGE: the robot on the field is the strongest opener you have.
                <figure>
-                 <img src="../assets/img/frc-2468-hopper/v2-cad.jpg" alt="Hopper V2 CAD assembly" width="1600" height="1000">
-                 <figcaption>Hopper V2 in CAD.</figcaption>
+                 <img src="../assets/img/frc-2468/robot-field.jpg" alt="Team 2468's robot on the field at the FIRST Championship" width="1600" height="1067">
+                 <figcaption>The 2026 robot at the FIRST Championship.</figcaption>
                </figure> -->
 
-          <h2>Why it expands</h2>
+          <nav class="contents" aria-label="On this page">
+            <p class="label-heading">On this page</p>
+            <ol>
+              <li><a href="#integration">Full-robot integration</a></li>
+              <li><a href="#transfer">Transfer subsystem</a></li>
+              <li><a href="#hopper">Expanding hopper</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="integration">Full-robot integration</h2>
+
+          <p>
+            On a student team the usual way a robot fails is not that a subsystem is
+            bad. It is that six good subsystems, drawn in parallel against slightly
+            different assumptions, cannot occupy the same volume. The intake wants
+            the space the hopper claimed; the shooter needs a mounting face the
+            drivetrain never provided. You find out in week five, and then you have
+            no weeks left.
+          </p>
+
+          <h3>Master sketching</h3>
+          <p>
+            So the first thing built was not a part. I used a master sketch to define
+            all subsystem interfaces, fix every space claim, and lay out the path a
+            game piece travels through the robot — intake to transfer to hopper to
+            shooter — as geometry that every subsystem then referenced. Anyone
+            detailing a mechanism was working against a shared, controlled definition
+            rather than their own idea of where the boundary sat.
+          </p>
+
+          <!-- IMAGE: master sketch interface. -->
+
+          <h3>Bringing it together</h3>
+          <p>
+            I integrated all six subsystems — drivetrain, shooter, intake, transfer,
+            hopper and electrical — and worked through the conflicts that surfaced
+            anyway. A master sketch reduces integration problems; it does not delete
+            them. The remaining ones are the interesting ones, because by then the
+            answer is always a trade between two subsystems that both have a reason
+            to be where they are.
+          </p>
+          <p>
+            The V2 robot competed at the FIRST Championship.
+          </p>
+
+          <hr>
+
+          <h2 id="transfer">Transfer subsystem</h2>
+
+          <p>
+            The transfer carries game pieces from the intake into the rest of the
+            robot. I designed it from scratch and then rebuilt it: V1 proved the
+            path, V2 made it something nobody had to touch between matches.
+          </p>
+
+          <!-- IMAGE: transfer V2 CAD and hardware. -->
+
+          <h3>V1: prove the path</h3>
+          <p>
+            The first version ran live axles driving O-rings on 3-D printed pulleys.
+            That is a fast way to find out whether the geometry moves a game piece at
+            all — printed pulleys can be redrawn overnight, and O-rings are forgiving
+            about alignment. It worked, and it told me what the second version needed
+            to fix.
+          </p>
+
+          <h3>V2: dead axles and a timing belt</h3>
+          <p>
+            V2 moved to a timing belt and pulleys, dead-axled on custom stub rollers.
+            Going dead-axle takes the rotating load off a through-shaft and puts it
+            into bearings at each roller, and a timing belt removes the slip that
+            O-rings tolerate by design. The result is a transfer whose speed is
+            actually the speed you commanded.
+          </p>
+
+          <h3>Sharing a shaft with the intake</h3>
+          <p>
+            The last roller of V2 is integrated onto the intake pivot shaft as a dead
+            axle. The shaft was already there, already located and already supported —
+            so putting the roller on it removed a bearing block, a mount and a space
+            claim from a part of the robot that had none of the three to spare.
+          </p>
+
+          <div class="callout">
+            <p class="callout__title">Designed to be left alone</p>
+            <p>
+              The whole of V2 was fastened with Nordlock washers and heavy-duty
+              hardware so it would be maintenance-free. In a competition weekend the
+              thing you cannot afford is a subsystem that needs re-torquing between
+              matches — the pit time is not there, and a fastener that backs out
+              during a match takes the robot with it.
+            </p>
+          </div>
+
+          <hr>
+
+          <h2 id="hopper">Expanding hopper</h2>
+
+          <p>
+            A hopper that expands horizontally to hold game pieces and collapses back
+            inside the frame. Two versions — and the second one is better because it
+            does less.
+          </p>
+
+          <!-- IMAGE: hopper V2 CAD and deployed hardware. -->
+
+          <h3>Why it expands</h3>
           <p>
             Capacity and frame perimeter pull in opposite directions: the robot has
             to start inside a legal footprint but wants to hold more than that
@@ -103,7 +211,7 @@
             working.
           </p>
 
-          <h2>V1: active geometry</h2>
+          <h3>V1: active geometry</h3>
           <p>
             The first version used an active geometry slot to deploy and stow the
             hopper off the intake pivot. The slot did the work of a linkage — the
@@ -111,7 +219,7 @@
             it followed.
           </p>
 
-          <h2>V2: take the mechanism out</h2>
+          <h3>V2: take the mechanism out</h3>
           <p>
             V2 dropped the driven slot and simply deploys when the intake deploys.
             It is less clever and considerably more reliable: fewer moving
@@ -121,7 +229,7 @@
             than demonstrate ingenuity.
           </p>
 
-          <h2>Making it survive the load</h2>
+          <h3>Making it survive the load</h3>
           <p>
             V2 carries eight sets of bearing stackups, offset to resist torque. A
             panel that swings out horizontally is a long lever arm on its pivots, and
@@ -131,9 +239,9 @@
           </p>
 
           <nav class="pager" aria-label="Project navigation">
-            <a href="frc-2468-transfer.html">
+            <a href="apptronik-hmi.html">
               <span class="pager__label">Previous project</span>
-              &larr; Transfer subsystem
+              &larr; HMI handles
             </a>
             <a href="quiet-supersonic-aircraft.html">
               <span class="pager__label">Next project</span>
@@ -144,13 +252,14 @@
 
         <aside class="project-aside" aria-label="Project details">
           <dl class="spec">
-            <div class="spec__row"><dt>Season</dt><dd>2026</dd></div>
+            <div class="spec__row"><dt>Season</dt><dd>2026 (4th season on the team)</dd></div>
             <div class="spec__row"><dt>Team</dt><dd>FRC 2468, Team Appreciate</dd></div>
-            <div class="spec__row"><dt>My role</dt><dd>Designed from scratch, both revisions</dd></div>
-            <div class="spec__row"><dt>Revisions</dt><dd>V1 active geometry &rarr; V2 intake-driven</dd></div>
-            <div class="spec__row"><dt>Bearings</dt><dd>8 stackups, offset for torque</dd></div>
-            <div class="spec__row"><dt>Tools</dt><dd>SOLIDWORKS</dd></div>
-            <div class="spec__row"><dt>Status</dt><dd>Competed</dd></div>
+            <div class="spec__row"><dt>Programme</dt><dd>150 students</dd></div>
+            <div class="spec__row"><dt>My role</dt><dd>Captain, design lead, lead driver</dd></div>
+            <div class="spec__row"><dt>Owned</dt><dd>Whole-robot integration; transfer and hopper from scratch</dd></div>
+            <div class="spec__row"><dt>Subsystems</dt><dd>Drivetrain, shooter, intake, transfer, hopper, electrical</dd></div>
+            <div class="spec__row"><dt>Tools</dt><dd>SOLIDWORKS, FDM printing</dd></div>
+            <div class="spec__row"><dt>Status</dt><dd>Competed at FIRST Championship</dd></div>
           </dl>
         </aside>
 

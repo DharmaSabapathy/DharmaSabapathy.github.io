@@ -21,7 +21,7 @@
 
 <!-- THEME BOOTSTRAP -->
 <script>
-(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light");}catch(e){}})();
 </script>
 </head>
 
@@ -124,9 +124,9 @@
                it belongs here. It is the one thing this page is missing. -->
 
           <nav class="pager" aria-label="Project navigation">
-            <a href="frc-2468-hopper.html">
+            <a href="frc-2468.html">
               <span class="pager__label">Previous project</span>
-              &larr; Expanding hopper
+              &larr; FRC 2468 competition robot
             </a>
             <a href="./">
               <span class="pager__label">Back to</span>

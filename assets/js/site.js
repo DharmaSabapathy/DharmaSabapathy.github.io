@@ -8,7 +8,10 @@
 
    The colour theme is applied by a tiny inline script in each page's <head>
    (see the `THEME BOOTSTRAP` comment in any HTML file) so there is no flash
-   of the wrong theme before this file runs.
+   of the wrong theme before this file runs. The site defaults to light and
+   only goes dark if the visitor picks it with the toggle — the operating
+   system preference is deliberately not consulted, so the first impression
+   is always the same one.
    ========================================================================== */
 
 (function () {

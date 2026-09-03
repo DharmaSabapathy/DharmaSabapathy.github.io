@@ -21,7 +21,7 @@
 
 <!-- THEME BOOTSTRAP -->
 <script>
-(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light");}catch(e){}})();
 </script>
 </head>
 
@@ -227,18 +227,9 @@
             </div>
             <div class="spec__row">
               <dt>2026</dt>
-              <dd><strong><a href="../projects/frc-2468-integration.html">Competition robot integration</a></strong>
-                  &mdash; master sketch defining six subsystem interfaces and space claims.</dd>
-            </div>
-            <div class="spec__row">
-              <dt>2026</dt>
-              <dd><strong><a href="../projects/frc-2468-transfer.html">Transfer subsystem</a></strong>
-                  &mdash; two revisions, live axle to dead-axled timing belt.</dd>
-            </div>
-            <div class="spec__row">
-              <dt>2026</dt>
-              <dd><strong><a href="../projects/frc-2468-hopper.html">Expanding hopper</a></strong>
-                  &mdash; horizontally expanding, eight offset bearing stackups.</dd>
+              <dd><strong><a href="../projects/frc-2468.html">FRC 2468 competition robot</a></strong>
+                  &mdash; whole-robot integration by master sketch; transfer and
+                  expanding hopper designed from scratch.</dd>
             </div>
             <div class="spec__row">
               <dt>2025</dt>

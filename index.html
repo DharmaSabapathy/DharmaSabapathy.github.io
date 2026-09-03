@@ -24,7 +24,7 @@
 <!-- THEME BOOTSTRAP — runs before first paint so there is no flash of the
      wrong theme. Keep this inline and keep it in every page. -->
 <script>
-(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light");}catch(e){}})();
 </script>
 </head>
 
@@ -226,18 +226,18 @@
         </li>
         <li>
           <article class="project-row project-row--no-thumb">
-            <p class="project-row__meta">2026 &middot; FRC 2468</p>
+            <p class="project-row__meta">2022&ndash;26 &middot; FRC 2468</p>
             <div class="project-row__body">
-              <h3 class="project-row__title"><a href="projects/frc-2468-integration.html">Competition robot integration</a></h3>
+              <h3 class="project-row__title"><a href="projects/frc-2468.html">FRC 2468 competition robot</a></h3>
               <p class="project-row__summary">
-                Full-robot integration from the ground up. A master sketch defined
-                every subsystem interface, space claim and the game-piece path
-                through the machine before anyone detailed a part.
+                Whole-robot integration plus the transfer and hopper subsystems,
+                designed from scratch. A master sketch fixed every interface and
+                space claim before anyone detailed a part.
               </p>
               <ul class="tag-list">
                 <li><span class="tag">Master sketch</span></li>
-                <li><span class="tag">Interface control</span></li>
-                <li><span class="tag">Packaging</span></li>
+                <li><span class="tag">Integration</span></li>
+                <li><span class="tag">Mechanism design</span></li>
               </ul>
             </div>
           </article>

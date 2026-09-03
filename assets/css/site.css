@@ -997,6 +997,34 @@ figcaption {
   margin-bottom: var(--space-1);
 }
 
+/* --- On-this-page contents -----------------------------------------------
+   Used on write-ups long enough that a reader wants to jump. Deliberately
+   plain: a rule, a mono label and a numbered list, not a boxed widget.
+   ------------------------------------------------------------------------ */
+
+.contents {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding-block: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+.contents .label-heading { margin-bottom: var(--space-2); }
+
+.contents ol {
+  margin: 0;
+  padding-left: 1.3em;
+  font-size: var(--step--1);
+}
+
+.contents li { margin-bottom: var(--space-1); }
+.contents li:last-child { margin-bottom: 0; }
+.contents a { text-decoration: none; }
+.contents a:hover { text-decoration: underline; }
+
+/* Long pages get section rules between major parts. */
+.prose hr { margin-block: var(--space-8); }
+
 /* --- Breadcrumb ---------------------------------------------------------- */
 
 .breadcrumb {

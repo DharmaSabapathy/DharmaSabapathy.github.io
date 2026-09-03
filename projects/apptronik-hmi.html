@@ -21,7 +21,7 @@
 
 <!-- THEME BOOTSTRAP -->
 <script>
-(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light");}catch(e){}})();
 </script>
 </head>
 
@@ -145,9 +145,9 @@
               <span class="pager__label">Previous project</span>
               &larr; LTV front trunk
             </a>
-            <a href="frc-2468-integration.html">
+            <a href="frc-2468.html">
               <span class="pager__label">Next project</span>
-              Competition robot integration &rarr;
+              FRC 2468 competition robot &rarr;
             </a>
           </nav>
         </article>

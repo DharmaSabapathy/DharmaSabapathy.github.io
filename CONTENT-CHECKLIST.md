@@ -14,9 +14,7 @@ image goes and what filename to use. Uncomment it, drop the file in, done.
 | --- | --- |
 | `projects/nasa-ltv-frunk.html` | Full front-end CAD assembly; gas-spring assembly; latch bracket |
 | `projects/apptronik-hmi.html` | Handle CAD; the SLS part on the robot |
-| `projects/frc-2468-integration.html` | Integrated robot CAD; master sketch; robot at the Championship |
-| `projects/frc-2468-transfer.html` | V2 CAD; V2 with pivot-shaft integration; V1 hardware |
-| `projects/frc-2468-hopper.html` | V2 CAD; V2 deployed; V1 hardware |
+| `projects/frc-2468.html` | Robot on the field; integrated robot CAD; master sketch; transfer V1/V2; hopper V1/V2 |
 | `projects/quiet-supersonic-aircraft.html` | Configuration model; CFD pressure field |
 
 Save them under `assets/img/<project-slug>/`. Export at about 1600 px wide and

@@ -21,7 +21,7 @@
 
 <!-- THEME BOOTSTRAP -->
 <script>
-(function(){try{var t=localStorage.getItem("theme");if(!t){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="dark"?"dark":"light");}catch(e){}})();
 </script>
 </head>
 
@@ -135,59 +135,22 @@
 
         <li>
           <article class="project-row project-row--no-thumb">
-            <p class="project-row__meta">2026 &middot; FRC 2468</p>
+            <p class="project-row__meta">2022&ndash;26 &middot; FRC 2468</p>
             <div class="project-row__body">
-              <h2 class="project-row__title"><a href="frc-2468-integration.html">Competition robot integration</a></h2>
+              <h2 class="project-row__title"><a href="frc-2468.html">FRC 2468 competition robot</a></h2>
               <p class="project-row__summary">
-                Full-robot integration from the ground up. A master sketch fixed every
-                subsystem interface, space claim and the game-piece path before anyone
-                detailed a part — then I integrated all six subsystems and resolved
-                what conflicted anyway.
+                Whole-robot integration plus two subsystems designed from scratch. A
+                master sketch fixed every interface and space claim before anyone
+                detailed a part; the transfer moved from live axles to a dead-axled
+                timing belt; the hopper traded a clever deployment for one that
+                couldn&rsquo;t jam. Competed at the FIRST Championship.
               </p>
               <ul class="tag-list">
                 <li><span class="tag">Master sketch</span></li>
-                <li><span class="tag">Interface control</span></li>
                 <li><span class="tag">Integration</span></li>
-              </ul>
-            </div>
-          </article>
-        </li>
-
-        <li>
-          <article class="project-row project-row--no-thumb">
-            <p class="project-row__meta">2026 &middot; FRC 2468</p>
-            <div class="project-row__body">
-              <h2 class="project-row__title"><a href="frc-2468-transfer.html">Transfer subsystem</a></h2>
-              <p class="project-row__summary">
-                Designed from scratch across two revisions. V1 proved the path on live
-                axles and printed pulleys; V2 moved to a dead-axled timing belt on
-                custom stub rollers, sharing a shaft with the intake pivot to save a
-                mount and a space claim.
-              </p>
-              <ul class="tag-list">
                 <li><span class="tag">Mechanism design</span></li>
                 <li><span class="tag">Dead axle</span></li>
-                <li><span class="tag">Timing belt</span></li>
-              </ul>
-            </div>
-          </article>
-        </li>
-
-        <li>
-          <article class="project-row project-row--no-thumb">
-            <p class="project-row__meta">2026 &middot; FRC 2468</p>
-            <div class="project-row__body">
-              <h2 class="project-row__title"><a href="frc-2468-hopper.html">Expanding hopper</a></h2>
-              <p class="project-row__summary">
-                A hopper that expands horizontally past the frame perimeter and
-                collapses back inside it. V2 traded V1&rsquo;s driven active-geometry slot
-                for a simpler deployment, and carries eight offset bearing stackups to
-                take the torque.
-              </p>
-              <ul class="tag-list">
-                <li><span class="tag">Mechanism design</span></li>
                 <li><span class="tag">Bearing stackups</span></li>
-                <li><span class="tag">Reliability</span></li>
               </ul>
             </div>
           </article>
